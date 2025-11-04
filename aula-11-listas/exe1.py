@@ -50,18 +50,39 @@ while True:
         case "7":
             # Parte 7 pedir para o usuario preencher todos os elementos do vetor
             for i in range(5):
-                input_vetor = input(f"Digite o número do indice {i}: ")
+                input_vetor = int(input(f"Digite o valor do indice {i}: "))
                 v[i] = input_vetor
             print(v)
 
         case "8":
             # Parte 8 pedir para o usuario preencher um elemento especifico do vetor
-            for i in range(5):
-                input_indice = input(f"Digite o número do vetor que quer mudar: ")
-                input_vetor = input(f"Digite o valor: ")
-                v[input_indice] = input_vetor
+
+            input_indice = int(input(f"Digite o número do vetor que quer mudar: "))
+            input_vetor = int(input(f"Digite o valor: "))
+            v[input_indice] = input_vetor
             print(v)
+
+        case "9":
+            # Parte 9 exibir todos os elementos do vetor
+            for i in range(5):
+                print(v[i])
+
+        case "10":
+            # Parte 10 Crie um vetor com a ordem inversa do vetor atual
+            vetor2 = []
+            for i in range(4,-1,-1):
+                vetor2.append(v[i])
+            print(vetor2)
+
+        case "11":
+            # Parte 11 Mostar o maior valor do vetor
+            maior_num = v[0]
+            for i in range(5):
+                if v[i] < maior_num:
+                    maior_num = v[i]
+            print(maior_num)
 
     input("\nDigite algo para sair")
 
 # print(sum_par)
+
